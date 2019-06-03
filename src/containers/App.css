@@ -14,12 +14,19 @@
     color: #fff;
 }
 
-.Todo {
+.TodoList {
     color:rgb(112, 144, 231);
     font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.TodoList ul {
+   padding: 5px; 
 }
 
-.Todo li {
+.TodoList li {
     list-style-type: none;
     background-color: azure;
     padding: 5px;
@@ -28,8 +35,36 @@
     min-width: 200px;
     text-align: center;
     font-weight: bold;
+    border: 1px solid  rgb(53, 13, 161);
 }
 
-.Todo li:hover {
+.TodoList li:hover {
     color: rgb(53, 13, 161)
 }
+.TodoForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.TodoForm button {
+    margin:5px;
+    cursor: pointer;
+    background-color: azure;
+    font-size: 28px;
+    color:rgb(90, 128, 231);
+    border: 1px solid  rgb(53, 13, 161);
+}
+.TodoForm button:hover {
+    color: red;
+}
+.TodoForm input {
+    font-size: 26px;
+}
+::placeholder {
+    color: grey;
+    opacity: 0.3; /* Firefox */
+  }

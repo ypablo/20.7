@@ -4,14 +4,17 @@ import style from '../containers/App.css';
 
 class TodoForm extends React.Component {
     constructor(props) {
-        super(props);   
+        super(props);  
+        this.state = {
+            inputValue: ""
+        } 
     }
 
     render() {
         return (
-            <div className={style.Todo}>
+            <div className={style.TodoForm}>
                 <form>
-                    <input type="text"></input>
+                    <input type="text" placeholder="What do you want to do?"></input>
                     <button>Add task</button>
                 </form>
             </div>
