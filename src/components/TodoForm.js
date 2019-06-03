@@ -13,9 +13,9 @@ class TodoForm extends React.Component {
     render() {
         return (
             <div className={style.TodoForm}>
-                <form>
-                    <input type="text" placeholder="What do you want to do?"></input>
-                    <button>Add task</button>
+                <form onSubmit={this.props.addItem}>
+                    <input type="text" placeholder="Add a task" value={this.props.inputValue}></input>
+                    <button type="submit" onClick={()=> this.props.add(item.id)}>Add</button>
                 </form>
             </div>
         );
