@@ -4,18 +4,21 @@ import style from '../containers/App.css';
 
 class TodoForm extends React.Component {
     constructor(props) {
-        super(props);  
-        this.state = {
-            inputValue: ""
-        } 
+        super(props);
+    }
+
+    addItem(event) {
+        event.preventDefault();
+        const el = document.querySelector('input').value;
+        this.props.addTodo(el);
     }
 
     render() {
         return (
             <div className={style.TodoForm}>
-                <form onSubmit={this.props.addItem}>
-                    <input type="text" placeholder="Add a task" value={this.props.inputValue}></input>
-                    <button type="submit" onClick={()=> this.props.add(item.id)}>Add</button>
+                <form onSubmit={this.addItem.bind(this)}>
+                    <input type="text" placeholder="Add a task"></input>
+                    <button type="submit">Add</button>
                 </form>
             </div>
         );
